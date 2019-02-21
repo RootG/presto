@@ -1,6 +1,7 @@
-FROM alpine
+FROM ubuntu
 
-RUN apk add --update python openjdk8-jre libffi-dev openssl-dev krb5-dev java-snappy
+RUN apt-get update
+RUN apt-get install -y wget openjdk-8-jre python
 
 RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.170/presto-server-0.170.tar.gz
 RUN tar -xvzf presto-server-0.170.tar.gz
