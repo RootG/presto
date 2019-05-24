@@ -1,7 +1,6 @@
 FROM ubuntu
 
-RUN apt-get update
-RUN apt-get install -y wget openjdk-8-jre python
+RUN apt-get update && apt-get install -y wget openjdk-8-jre python
 
 ARG PRESTO_VERSION=0.170
 
