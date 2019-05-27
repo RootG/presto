@@ -11,7 +11,7 @@ RUN rm presto-server-${PRESTO_VERSION}.tar.gz
 COPY etc /presto/etc
 
 VOLUME /var/presto/data
-VOLUME /presto/etc/catalog
+VOLUME /presto/etc
 EXPOSE 8080
 
 WORKDIR /presto
